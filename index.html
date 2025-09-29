@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siddhartha Ghosh - Senior Project Manager</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        .header .title {
+            font-size: 1.2em;
+            font-weight: 400;
+            margin-bottom: 20px;
+            opacity: 0.95;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 35px;
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            color: #667eea;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 3px solid #667eea;
+            font-weight: 600;
+        }
+
+        .summary {
+            font-size: 1.05em;
+            text-align: justify;
+            color: #555;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .skill-item {
+            background: #f8f9fa;
+            padding: 12px 18px;
+            border-radius: 6px;
+            border-left: 4px solid #667eea;
+            transition: transform 0.2s;
+        }
+
+        .skill-item:hover {
+            transform: translateX(5px);
+            background: #e9ecef;
+        }
+
+        .experience-item {
+            margin-bottom: 30px;
+            border-left: 3px solid #667eea;
+            padding-left: 20px;
+        }
+
+        .job-header {
+            margin-bottom: 10px;
+        }
+
+        .job-title {
+            font-size: 1.3em;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .company {
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        .duration {
+            color: #666;
+            font-style: italic;
+            font-size: 0.95em;
+        }
+
+        .job-description {
+            margin-top: 10px;
+        }
+
+        .job-description li {
+            margin-left: 20px;
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        .certifications {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+        }
+
+        .cert-item {
+            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #667eea30;
+        }
+
+        .cert-name {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .cert-details {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .highlight-box {
+            background: #f8f9fa;
+            border-left: 4px solid #764ba2;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+
+        .project-highlight {
+            margin-bottom: 15px;
+        }
+
+        .project-title {
+            font-weight: 600;
+            color: #764ba2;
+            margin-bottom: 5px;
+        }
+
+        .education-item {
+            background: #f8f9fa;
+            padding: 12px 18px;
+            margin-bottom: 10px;
+            border-radius: 6px;
+            border-left: 4px solid #764ba2;
+        }
+
+        .personal-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .info-item {
+            padding: 10px;
+        }
+
+        .info-label {
+            font-weight: 600;
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+            .contact-info {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .content {
+                padding: 20px;
+            }
+        }
+
+        .note {
+            font-style: italic;
+            color: #666;
+            font-size: 0.95em;
+            margin-top: 10px;
+            padding: 10px;
+            background: #fff3cd;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>SIDDHARTHA GHOSH</h1>
+            <div class="title">SENIOR PROJECT MANAGER — IT · AI-ENABLED SOLUTIONS</div>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span>📧</span>
+                    <span>siddhartha1.ghosh@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <span>📱</span>
+                    <span>+91 80178 07045</span>
+                </div>
+                <div class="contact-item">
+                    <span>📍</span>
+                    <span>Kolkata, West Bengal, India</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="section">
+                <h2 class="section-title">Professional Summary</h2>
+                <p class="summary">
+                    Senior Project Manager with 15+ years in IT and 5+ years leading Agile teams, delivering enterprise applications, e-commerce platforms, SaaS and AI-enabled initiatives. Proven track record coordinating cross-functional and remote teams, managing freelancers, launching e-learning products, and planning training lab infrastructure. Skilled at vendor coordination, curriculum rollout, and bridging technical teams with delivery objectives.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Core Competencies</h2>
+                <div class="skills-grid">
+                    <div class="skill-item">Project Management & Strategic Planning</div>
+                    <div class="skill-item">Agile Methodologies (Scrum, Kanban)</div>
+                    <div class="skill-item">Scrum Master — Sprint Planning, Daily Stand-ups, Sprint Reviews & Retrospectives</div>
+                    <div class="skill-item">Technical Program Coordination</div>
+                    <div class="skill-item">Remote Team Leadership & Facilitation</div>
+                    <div class="skill-item">Vendor Procurement & Infrastructure</div>
+                    <div class="skill-item">Budgeting & Resource Allocation</div>
+                    <div class="skill-item">Quality Assurance & Documentation</div>
+                    <div class="skill-item">Backlog Grooming & User Story Management</div>
+                </div>
+                <div class="highlight-box" style="margin-top: 20px;">
+                    <strong>Tools:</strong> JIRA, Trello, Asana, ClickUp, Odoo, Hubstaff, Slack, Git/GitHub
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Relevant Tech, AI & Project Management Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <strong>Project Management & Delivery:</strong> Expert in Agile delivery (Scrum, Kanban), sprint planning, release management, stakeholder management, resource allocation, budgeting, risk identification/mitigation, dependency tracking, KPI reporting, and vendor SLAs
+                    </div>
+                    <div class="skill-item">
+                        <strong>Data & AI/ML Coordination:</strong> OpenAI API integration, text-to-speech (TTS) implementation, chatbot development and deployment, computer vision for logo comparison, coordinating data preprocessing, model evaluation workflows, and acting as liaison between ML engineers and development teams
+                    </div>
+                    <div class="skill-item">
+                        <strong>Platforms & Integrations:</strong> Specify and integrate SaaS platforms, LMS systems, APIs and third-party tools (including e-commerce and payment integrations) to support training and product delivery
+                    </div>
+                    <div class="skill-item">
+                        <strong>Training & Course Delivery:</strong> Define LMS requirements, structure blended online/offline course workflows, manage content rollout, trainer coordination and student onboarding processes for e-learning programs
+                    </div>
+                    <div class="skill-item">
+                        <strong>Release Management, QA & Operations:</strong> Implement release processes, runbooks, QA checks and post-release support procedures to ensure stable deployments and training environments
+                    </div>
+                    <div class="skill-item">
+                        <strong>Tools & Collaboration:</strong> Hands-on with JIRA, Trello, Asana, ClickUp, Odoo, Hubstaff and Slack for task tracking, time tracking and team communication
+                    </div>
+                    <div class="skill-item">
+                        <strong>Vendor & Stakeholder Management:</strong> Procurement, SLA definition, vendor coordination for hardware, software and licenses; manage stakeholder expectations and delivery commitments
+                    </div>
+                    <div class="skill-item">
+                        <strong>Project-Level Security & Data Handling:</strong> Ensure appropriate data transfer, backup and access-control practices are defined and followed (operational oversight, not hands-on security engineering)
+                    </div>
+                </div>
+                <p class="note">
+                    Note: These entries describe project-level and operational capabilities — technical implementation is executed by specialist engineers while I manage planning, delivery, quality and stakeholder coordination.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Certifications</h2>
+                <div class="certifications">
+                    <div class="cert-item">
+                        <div class="cert-name">Certified Scrum Product Owner (CSPO)</div>
+                        <div class="cert-details">Scrum Alliance, Nov 2023</div>
+                    </div>
+                    <div class="cert-item">
+                        <div class="cert-name">Google Project Management Professional</div>
+                        <div class="cert-details">Coursera, Aug 2020</div>
+                    </div>
+                    <div class="cert-item">
+                        <div class="cert-name">Agile Scrum Master</div>
+                        <div class="cert-details">Udemy, Apr 2020</div>
+                    </div>
+                    <div class="cert-item">
+                        <div class="cert-name">Product Management</div>
+                        <div class="cert-details">Udemy, Apr 2020</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Professional Experience</h2>
+                
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div class="job-title"><span class="company">DESUN TECHNOLOGY PVT LTD</span> — Senior Project Manager</div>
+                        <div class="duration">Feb 2025 – Sep 2025</div>
+                    </div>
+                    <ul class="job-description">
+                        <li>Collaborated with delivery managers, VP and CTO to define project scope, timelines and milestones for enterprise and product initiatives</li>
+                        <li>Led Agile ceremonies (sprint planning, daily stand-ups, retrospectives) and managed cross-functional delivery across development, QA and design</li>
+                        <li>Coordinated vendor relationships for tooling, SaaS subscriptions and infrastructure; enforced documentation and SLAs</li>
+                        <li>Managed remote freelancers for content, integrations and testing to support product and training releases</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div class="job-title"><span class="company">INDUS NET TECHNOLOGIES PVT LTD</span> — Project Manager</div>
+                        <div class="duration">Aug 2024 – Feb 2025</div>
+                    </div>
+                    <ul class="job-description">
+                        <li>Defined project scope and worked with stakeholders to prioritize roadmap items; tracked progress using JIRA and Trello</li>
+                        <li>Implemented release management processes and post-release support; maintained knowledge base and runbooks</li>
+                        <li>Liaised with external trainers and content creators to coordinate e-learning module delivery</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div class="job-title"><span class="company">W G TECHNOLOGIES PVT LTD</span> — Technical Project Manager</div>
+                        <div class="duration">Mar 2023 – Aug 2024</div>
+                    </div>
+                    <ul class="job-description">
+                        <li>Created project timelines in collaboration with executive stakeholders and managed resource allocation</li>
+                        <li>Planned technical integrations and supported engineering teams to resolve critical issues</li>
+                        <li>Supported development of training material and coordinated pilot workshops for internal upskilling</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div class="job-title"><span class="company">INYT TECHNOLOGIES PVT LTD</span> — Project Manager</div>
+                        <div class="duration">Sep 2020 – Feb 2023</div>
+                    </div>
+                    <ul class="job-description">
+                        <li>Directed Agile teams to deliver SaaS and web solutions; coordinated QA and design for consistent product quality</li>
+                        <li>Maintained comprehensive documentation and supported client onboarding and training processes</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div class="job-title"><span class="company">SASTASUNDAR MARKETPLACE LTD</span> — Technical Team Leader / Senior Software Engineer</div>
+                        <div class="duration">Apr 2015 – May 2020</div>
+                    </div>
+                    <ul class="job-description">
+                        <li>Led development teams to deliver scalable e-commerce and marketplace solutions; mentored junior developers</li>
+                        <li>Managed stakeholder requirements and delivered iterative enhancements aligned to business priorities</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div class="job-title"><span class="company">EXPERIS IT PVT LTD</span> — Software Developer</div>
+                        <div class="duration">Apr 2014 – Apr 2015</div>
+                    </div>
+                    <ul class="job-description">
+                        <li>Developed and maintained software solutions; participated in design and code reviews</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div class="job-title"><span class="company">eMALLO INTERNATIONAL LLC</span> — Project Consultant & Technical Head</div>
+                        <div class="duration">May 2011 – Mar 2014</div>
+                    </div>
+                    <ul class="job-description">
+                        <li>Oversaw project delivery for cross-border teams; coordinated executive planning and technical execution</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Selected Project Highlights</h2>
+                <div class="highlight-box">
+                    <div class="project-highlight">
+                        <div class="project-title">Real Sales — AI-Powered Sales Intelligence Platform</div>
+                        <p><strong>Platform:</strong> <a href="https://realsales-admin.vercel.app/" target="_blank">realsales-admin.vercel.app</a></p>
+                        <p><strong>Tech Stack:</strong> React/Next.js, Python, MySQL, OpenAI API, ElevenLabs API (Voice AI)</p>
+                        <p>Led cross-functional team of React/Next.js frontend developers, Python backend developers, ML engineers, and API integrators. Delivered MVP in 3 months with AI-driven insights and voice interaction features. Reduced manual reporting effort by 40%, improved lead conversion accuracy by 20%, and increased adoption among non-technical sales staff through Voice AI integration.</p>
+                    </div>
+                    <div class="project-highlight">
+                        <div class="project-title">Verbilab — AI Content Creation Platform</div>
+                        <p><strong>Platform:</strong> <a href="https://verbilab.com/" target="_blank">verbilab.com</a></p>
+                        <p><strong>Tech Stack:</strong> Next.js, Node.js, MySQL, OpenAI API, Vercel</p>
+                        <p>Led 5-member cross-functional team (2 frontend devs, 1 backend dev, 1 QA, 1 designer) to build SaaS platform for AI-driven content generation. Coordinated AI integration with OpenAI API, implemented prompt engineering, and optimized API calls for scalability. Successfully launched with 70% reduction in content creation time for users and strong SEO-optimized outputs.</p>
+                    </div>
+                    <div class="project-highlight">
+                        <div class="project-title">Colonial Reality — Real Estate Web Platform</div>
+                        <p><strong>Platform:</strong> <a href="https://colonial-reality-web-git-dev-desuntechs-projects.vercel.app" target="_blank">colonial-reality-web</a></p>
+                        <p><strong>Tech Stack:</strong> Next.js, CodeIgniter (PHP), MySQL, MLS/YGL APIs, Google Maps API</p>
+                        <p>Managed 6-member team using Scrum methodology (2-week sprints). Built modern real estate platform with advanced property search, real-time MLS/YGL API integration, and interactive Google Maps. Implemented data normalization middleware, optimized queries, and clustering for map performance. Increased client lead conversion by 30% and achieved strong SEO performance through Next.js SSR.</p>
+                    </div>
+                    <div class="project-highlight">
+                        <div class="project-title">Trademark Comparison Platform — LegalTech AI Solution</div>
+                        <p><strong>Platform:</strong> <a href="https://trademark-comparision-mufzhsxrhxm6ey4mtbcamg.streamlit.app/" target="_blank">Trademark Comparison Demo</a></p>
+                        <p><strong>Tech Stack:</strong> Streamlit, PHP, Python, MySQL, OpenAI embeddings, Vision LLMs, OpenCV, CNN-based models</p>
+                        <p>Led 6-member team (backend, AI/ML engineers, frontend, QA) to deliver POC in 6 weeks. Automated comparison of weekly Indian Govt. Trademark Journals against 15k-20k trademark database using NLP fuzzy matching and computer vision for logo similarity detection. Achieved 70-80% accuracy, reduced manual legal review workload by 60%, and provided structured PDF/CSV reports for legal teams.</p>
+                    </div>
+                    <div class="project-highlight">
+                        <div class="project-title">SastaSundar — Online Pharmacy Platform</div>
+                        <p><strong>Platform:</strong> <a href="https://sastasundar.com/" target="_blank">sastasundar.com</a></p>
+                        <p><strong>Tech Stack:</strong> CodeIgniter, SQL Server, Python, Webservices</p>
+                        <p><strong>Role & Delivery:</strong> Led cross-functional delivery for the SastaSundar e-commerce platform, coordinating backend (CodeIgniter + SQL Server) and Python-based integrations with third-party services. Managed API/webservice design, payment & order workflows, and vendor coordination for catalog and lab-test features. Implemented release and QA processes, improved operational handoffs between dev/ops and support teams, and ensured robust documentation and runbooks for product and logistics teams.</p>
+                    </div>
+                    <div class="project-highlight">
+                        <div class="project-title">RetailerShakti — B2B Pharma Distribution Portal</div>
+                        <p><strong>Platform:</strong> <a href="https://www.retailershakti.com/" target="_blank">retailershakti.com</a></p>
+                        <p><strong>Tech Stack:</strong> CodeIgniter, SQL Server, Python, Webservices</p>
+                        <p><strong>Role & Delivery:</strong> Project-managed the B2B distributor portal rollout—oversaw functional requirements for bulk ordering, registration workflows, and location-based cataloging. Coordinated frontend and backend teams to stabilize the CodeIgniter application, defined SLA-driven webservice contracts for inventory/order sync, and ran stakeholder demos with commercial teams to align feature priorities and on-boarding flows for retailers.</p>
+                    </div>
+                    <div class="project-highlight">
+                        <div class="project-title">GenuPath Labs — Online Lab Test Booking Platform</div>
+                        <p><strong>Platform:</strong> <a href="https://www.genupathlabs.com/" target="_blank">genupathlabs.com</a></p>
+                        <p><strong>Tech Stack:</strong> React, SQL Server, Python, Webservices</p>
+                        <p><strong>Role & Delivery:</strong> Led the end-to-end delivery of the lab bookings and appointment platform, liaising with clinical teams to translate product requirements into technical scope. Managed the React frontend and Python/webservice backend teams, planned data models on SQL Server, and coordinated integrations for test catalogs, appointment slots and reporting workflows. Implemented operational processes for lab onboarding and data handling to support a scalable booking experience.</p>
+                    </div>
+                    <div class="project-highlight">
+                        <div class="project-title">Sonoscan Healthcare — Diagnostic Services Portal</div>
+                        <p><strong>Platform:</strong> <a href="https://www.sonoscanhealthcare.net/sono/" target="_blank">sonoscanhealthcare.net</a></p>
+                        <p><strong>Tech Stack:</strong> PHP, MySQL</p>
+                        <p><strong>Role & Delivery:</strong> Served as project lead for vendor selection, PHP/MySQL development coordination, and rollout of core diagnostic service pages and booking flows. Defined deployment & QA checklists, managed developer tasks and bug triage, and coordinated content and clinical stakeholder sign-offs for site launch and subsequent feature updates.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Education</h2>
+                <div class="education-item">
+                    <strong>BA (English Hons)</strong> — N D College, Howrah (2007)
+                </div>
+                <div class="education-item">
+                    <strong>Advanced Diploma in IT</strong> — 1.5 Years
+                </div>
+                <div class="education-item">
+                    <strong>Certificate in Internet Applications</strong> — 6 Months
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Personal Information</h2>
+                <div class="personal-info">
+                    <div class="info-item">
+                        <div class="info-label">Date of Birth</div>
+                        <div>19 Nov 1983</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Languages</div>
+                        <div>English, Bengali, Hindi</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Hobbies</div>
+                        <div>Driving, Music, Family & Friends</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">References</h2>
+                <p>Available upon request.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
